@@ -1,0 +1,239 @@
+/* ── Design tokens ─────────────────────────────────── */
+:root {
+  --accent: #7c3aed;
+  --accent2: #a78bfa;
+}
+
+/* ── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #1e2d4a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7c3aed; }
+
+/* ── Hero grid background ──────────────────────────── */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(124,58,237,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Gradient text ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section label ─────────────────────────────────── */
+.section-label {
+  display: inline-block;
+  color: var(--accent2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* ── Navbar scroll shadow ──────────────────────────── */
+.navbar-scrolled {
+  background: rgba(10, 15, 30, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e2d4a;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+
+/* ── Social chip ───────────────────────────────────── */
+.social-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #1e2d4a;
+  color: #64748b;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+.social-chip:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+/* ── Skill cards ───────────────────────────────────── */
+.skill-card {
+  background: #1a2035;
+  border: 1px solid #1e2d4a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.skill-card:hover {
+  border-color: rgba(124,58,237,0.4);
+  transform: translateY(-2px);
+}
+.skill-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+.skill-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(124,58,237,0.12);
+  color: #a78bfa;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(124,58,237,0.2);
+  transition: background 0.2s;
+}
+.skill-tag:hover { background: rgba(124,58,237,0.25); }
+
+/* ── Experience tags ───────────────────────────────── */
+.exp-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(30,45,74,0.8);
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid #1e2d4a;
+}
+
+/* ── Project cards ─────────────────────────────────── */
+.project-card {
+  background: #1a2035;
+  border: 1px solid #1e2d4a;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  border-color: rgba(124,58,237,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(124,58,237,0.15);
+}
+.project-img {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+}
+.proj-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background: rgba(124,58,237,0.1);
+  color: #a78bfa;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid rgba(124,58,237,0.2);
+}
+.proj-btn-primary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.625rem;
+  background: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.proj-btn-primary:hover { background: rgba(124,58,237,0.7); }
+.proj-btn-outline {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.625rem;
+  border: 1px solid #1e2d4a;
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s;
+}
+.proj-btn-outline:hover { border-color: var(--accent2); color: var(--accent2); }
+
+/* ── Case studies ──────────────────────────────────── */
+.case-study-item {
+  background: #1a2035;
+  border: 1px solid #1e2d4a;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.case-study-item:hover { border-color: rgba(124,58,237,0.3); }
+.case-study-trigger { background: transparent; cursor: pointer; }
+.case-chevron.open { transform: rotate(180deg); }
+
+/* ── Contact form ──────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: #1a2035;
+  border: 1px solid #1e2d4a;
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+.form-input::placeholder { color: #475569; }
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+}
+.form-input.error { border-color: #ef4444; }
+
+/* ── Contact info rows ─────────────────────────────── */
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem;
+  border-radius: 0.75rem;
+  border: 1px solid #1e2d4a;
+  background: #1a2035;
+  color: inherit;
+  transition: border-color 0.2s;
+}
+.contact-info-row:hover { border-color: rgba(124,58,237,0.4); }
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  background: rgba(124,58,237,0.1);
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+
+/* ── Scroll reveal animations ──────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hamburger open state ──────────────────────────── */
+.menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+.menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ── Active nav link ───────────────────────────────── */
+.nav-link.active { color: #a78bfa; }
+
+/* ── Selection color ───────────────────────────────── */
+::selection { background: rgba(124,58,237,0.35); color: #e2e8f0; }
